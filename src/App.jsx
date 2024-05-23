@@ -4,7 +4,6 @@ import ItemListContainer from './components/ItemListContainer'
 import Footer from './components/Footer';
 
 
-
 const App = () => {
   return (
     <>
