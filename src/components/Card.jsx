@@ -1,16 +1,19 @@
-const Card = ({ img, name, descripcion = "Personaje" }) => {
+const Card = ({ imagen, nombre, descripcion = "Sin informacion", precio }) => {
 
     return (
         <div className="card">
-            <div className="container-img">
-                <img src={img} alt={name} />
-            </div>
             <h2>
-                {name}
+                {nombre}
             </h2>
-            <h3>
-                Tipo: { descripcion }
-            </h3>
+            <div className="container-img">
+                <img src={imagen} alt={nombre} className="imagenes-productos" />
+            </div>
+            <h4>
+                Tipo: {descripcion}
+            </h4>
+            <p>
+                Precio: ${precio}
+            </p>
         </div>
     )
 }

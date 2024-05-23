@@ -36,10 +36,43 @@ input{
   border: 2px solid rgb(255, 255, 255);
   border-radius: .25rem;
 }
-img{
+.icono-carrito{
   width: 15px;
   height: 15px;
 }
+
+/* productos  */
+.los-productos{
+  margin: .625rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "card card card card"
+  "card card card card";
+  justify-items: center;
+}
+
+
+
+/* Cards */
+.card{
+  width: 16rem;
+  height: 20rem;
+  margin: .3125rem;
+  border-radius: 1.25rem;
+  border: solid black .125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imagenes-productos{
+  width: auto;
+  height:8rem;
+};
+
+
 
 /* FOOTER */
 .contFooter{

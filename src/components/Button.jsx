@@ -1,30 +1,40 @@
+import { useState } from "react";
+import Text from "./Text";
 
-const nombre ="juan",
-apellido = "Bassano";
+/* const Button = ()=>{
+    
+    const [number, setNumber] = useState(0);
+    const sumar = () =>{
+        setNumber(number+1);
+    }
+    const restar = ()=>{
+        setNumber(number-1)
+    }
+    return(
+        <div>
+            <button onClick={restar}> restar</button>
+            <h2>
+                {number}
+            </h2>
+            <button onClick={sumar}> Sumar</button>
+        </div>
+    )
+};
+export default Button; */
+import React from 'react'
 
-const concaternarNombreUsuario = (nombre , apellido)=>`${nombre} ${apellido}`
-console.log(concaternarNombreUsuario);
-const Button = () =>{
+function Button() {
+    const [show, setShow] = useState(false);
+    function handleShow() {
+        setShow(!show);
+        console.log(show);
+    }
     return (
-        <div className="container">
-            <div>
-                <h1>
-                    Hola mundo
-                </h1>
-            </div>
-            <main>
-                <section>
-                    <h2>
-                        Noticias de porogramacion
-                    </h2>
-                    <p>
-                        {texto}
-                    </p>
-                    <button onClick={handleClick}>
-
-                    </button>
-                </section>
-            </main>
+        <div>
+            <button onClick={handleShow}>{show ? "ocultar" : "Mostrar"}</button>
+            {show && <Text/>}
         </div>
     )
 }
+
+export default Button;
