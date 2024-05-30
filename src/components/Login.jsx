@@ -17,7 +17,7 @@ function Login() {
                 <button id="entrarLG" className="lgbtn" type="submit">Enviar</button>
                 <button className="lgbtn" type="reset">Limpiar</button>
                 <p>Ya tienes cuenta ?</p>
-                <p><Link to={`/`}>Home </Link></p>
+                <p><Link to={`/Home`}>Home </Link></p>
             </form>
         </div>
         )
