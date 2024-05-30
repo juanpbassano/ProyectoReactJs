@@ -1,5 +1,7 @@
-
+import { BrowserRouter, Router, Route } from 'react-router-dom';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
+
 
 const NavBar = () => {
     return (
@@ -11,14 +13,14 @@ const NavBar = () => {
                         <input className='search' id="search" type="search" required placeholder="Buscador" />
                     </div>
                     <ul className='contButtons'>
-                        <a href="#" target='_blank' className='navButtons' >Home</a>
-                        <a href="#" target='_blank' className='navButtons'>Shop</a>
-                        <CartWidget />
-                        <a href="#" target='_blank' className='navButtons'>Login/Signup</a>
+                        <li className='navButtons'><Link to={`/`}>Home</Link></li>
+                        <li className='navButtons'><Link to={`/Shop`}>Shop</Link></li>
+                        <li><CartWidget/></li>
+                        <li className='navButtons'><Link to={`/Login`}>Login/Signup</Link></li>
                     </ul>
                 </div>
             </nav>
-        </header>
+        </header> 
     )
 }
 export default NavBar;

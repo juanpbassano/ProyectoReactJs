@@ -32,7 +32,9 @@ input {
 }
 
 .contButtons {
+  display: flex;
   flex-wrap: nowrap;
+  list-style: none;
 }
 
 .search {

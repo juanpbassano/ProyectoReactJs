@@ -1,7 +1,8 @@
 import carrito from '../assets/carrito.svg';
+import { Link } from 'react-router-dom';
 const CartWidget = () => {
     return (
-        <a href="#" target='_blank' className='navButtons'>Carrito <img src={carrito} alt="icono de carrito" className='icono-carrito'/> 3</a>
+        <li className='navButtons'><Link to={'./CartWidget'}>Carrito <img src={carrito} alt="icono de carrito" className='icono-carrito'/> 3</Link></li>
     )
 }
 export default CartWidget;

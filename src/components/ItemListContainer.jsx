@@ -12,7 +12,7 @@ const ItemListContainer = () => {
         const obtenerData = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(bd)
-            }, 2500)
+            }, 2000)
         })
             .then((respuesta) => {
                 setData(respuesta)
