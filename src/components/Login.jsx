@@ -15,7 +15,7 @@ function Login() {
                 <input id="passR1" className="inputR" type="password" name="password" placeholder="Contraseña"/><br />
                 <input id="passR2" className="inputR" type="password" name="password2" placeholder="Repite la Contraseña"/><br />
                 <button id="entrarLG" className="lgbtn" type="submit">Enviar</button>
-                <button clasName="lgbtn" type="reset">Limpiar</button>
+                <button className="lgbtn" type="reset">Limpiar</button>
                 <p>Ya tienes cuenta ?</p>
                 <p><Link to={`/`}>Home </Link></p>
             </form>
