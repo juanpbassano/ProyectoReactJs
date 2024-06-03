@@ -7,13 +7,13 @@ const Footer = () => {
             <div>
                 <ul className="contEnlases">
                     <li>
-                        <a href="#" target="_blank">Linkedin</a>
+                        <a className="social-link" href="#" target="_blank">Linkedin</a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">Facebook</a>
+                        <a className="social-link" href="#" target="_blank">Facebook</a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">Instagram</a>
+                        <a className="social-link" href="#" target="_blank">Instagram</a>
                     </li>
                 </ul>
             </div>

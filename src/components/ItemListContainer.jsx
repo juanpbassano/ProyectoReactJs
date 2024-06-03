@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react"
 import bd from "../../data/bd.json"
 import Card from "./Card"
@@ -12,13 +11,17 @@ const ItemListContainer = () => {
         const obtenerData = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(bd)
-            }, 2000)
+            }, 1500)
         })
             .then((respuesta) => {
                 setData(respuesta)
                 setCargando(false)
             })
-    })
+            .catch((error) => {
+                console.error("Error al obtener los datos:", error);
+                setCargando(false);
+            });
+    }, []);
 
 
     return (
@@ -30,6 +33,7 @@ const ItemListContainer = () => {
                         data.map((producto) => (
                             <Card
                                 key={producto.id}
+                                id={producto.id}
                                 nombre={producto.nombre}
                                 descripcion={producto.descripcion}
                                 precio={producto.precio}

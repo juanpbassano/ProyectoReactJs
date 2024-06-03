@@ -1,4 +1,3 @@
-import { BrowserRouter, Router, Route } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 
@@ -13,9 +12,8 @@ const NavBar = () => {
                         <input className='search' id="search" type="search" required placeholder="Buscador" />
                     </div>
                     <ul className='contButtons'>
-                        <li className='navButtons'><Link to={`/Home`}>Home</Link></li>
-                        <li className='navButtons'><Link to={`/Shop`}>Shop</Link></li>
-                        <CartWidget/>
+                        <li className='navButtons'><Link to={`/`}>Home</Link></li>
+                        <Link to={'./carrito'}><CartWidget/></Link>
                         <li className='navButtons'><Link to={`/Login`}>Login/Signup</Link></li>
                     </ul>
                 </div>

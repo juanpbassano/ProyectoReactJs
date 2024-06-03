@@ -1,45 +1,25 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Card = ({ imagen, nombre, descripcion = "Sin informacion", precio }) => {
-
-    const [cantidad, setCantidad] = useState(0);
-    const sumar = () => {
-        setCantidad(cantidad + 1)
-    }
-    const restar = () => {
-        if(cantidad > 0){
-            setCantidad(cantidad - 1)
-        }
-    }
+const Card = ({ id, imagen, nombre, descripcion = "Sin informacion", precio }) => {
 
 
 
     return (
-        <div className="card">
-            <h2>
-                {nombre}
-            </h2>
-            <div className="container-img">
-                <img src={imagen} alt={nombre} className="imagenes-productos" />
-            </div>
-            <h4>
-                Tipo: {descripcion}
-            </h4>
-            <p>
-                Precio: ${precio}
-            </p>
-            <div>
-                <span className="tit-cant">Seleccione la cantidad</span>
-                <div className="botones-stock">
-                    <button onClick={restar} className="btn-restar">-</button>
-                    <span className="cantidad">{cantidad}</span>
-                    <button onClick={sumar} className="btn-sumar">+</button>
+        <Link to={`/descripcion/${id}`}>
+            <div className="card">
+                <h2>
+                    {nombre}
+                </h2>
+                <div className="container-img">
+                    <img src={imagen} alt={'foto de ' + nombre} className="imagenes-productos" />
                 </div>
-                <div className="cont-btn-add">
-                    <button className="btn-add-cart">Agregar al carrito</button>
-                </div>
+                <p>Ver Mas...</p>
+                <p>
+                    Precio: ${precio}
+                </p>
             </div>
-        </div>
+        </Link>
     )
 }
 export default Card;

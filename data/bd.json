@@ -5,7 +5,7 @@
         "precio": 2000,
         "stock": 10,
         "imagen": "https://media.istockphoto.com/id/1318409866/es/foto/saco-de-pl%C3%A1stico-de-arroz-integral-con-etiqueta-en-blanco.jpg?s=1024x1024&w=is&k=20&c=MQRFzSkw7lyUeANBaVJx8CspiFXYQk_teqxx-qJJzBM=",
-        "descripcion": "Arroz blanco"
+        "descripcion": "El Arroz blanco Tiene un grano rechoncho y un alto contenido en almidón, lo que le da un equilibrio perfecto de cremosidad y mordedura, por lo que es ideal para un risotto tradicional."
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "precio": 1500,
         "stock": 15,
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_654781-MLA43356660403_092020-F.webp",
-        "descripcion": "Fideos rulitos"
+        "descripcion": "Los tallarines Marolio son de tipo seco y vienen en una práctica bolsa que facilita su almacenamiento y conservación. Aunque no son integrales ni libres de gluten, su sabor y textura te conquistarán desde el primer bocado."
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "precio": 3000,
         "stock": 5,
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_820491-MLA53170558100_012023-F.webp",
-        "descripcion": "Lata de atun natural"
+        "descripcion": "El atún, cuidadosamente seleccionado, se conserva en aceite de la más alta calidad, lo que garantiza su frescura y sabor inigualables. Además, es apto para celíacos, ya que no contiene gluten. Disfruta de su textura suave y jugosa, ideal para preparar ensaladas, sándwiches o simplemente disfrutarlo solo."
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "precio": 2000,
         "stock": 40,
         "imagen": "https://media.istockphoto.com/id/957824528/es/foto/pan-de-molde-aislado-sobre-fondo-blanco-rebanadas-de-pan-y-migas-vistas-desde-arriba-vista.jpg?s=1024x1024&w=is&k=20&c=29DEoK3Vax1_gM97Rr3bM1PLrH_XJkQKnNeOBYEHVLY=",
-        "descripcion": "Pan de masa madre cacero"
+        "descripcion": "El pan de masa madre es un pan que utiliza como fermento la mezcla de harina y agua. Bajo condiciones de temperatura, humedad y tiempo adecuados va generando bacterias y levaduras naturales propias de la harina. Así, logra un fermento natural. Con el pan de masa madre se busca un producto menos industrializado.27 may 2022"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "precio": 8500,
         "stock": 20,
         "imagen": "https://carrefourar.vtexassets.com/arquivos/ids/324345-800-auto?v=638197801072770000&width=800&height=auto&aspect=true",
-        "descripcion": "Paquete de cafe"
+        "descripcion": "La Morenita Clásico es una combinación de cafés de distintos orígenes con un balanceado perfil de tostación. Una bebida con el sabor del clásico café preferido por los argentinos. En La Morenita seleccionamos cuidadosamente los granos de los mejores cafetarles del mundo."
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "precio": 2200,
         "stock": 12,
         "imagen": "https://acdn.mitiendanube.com/stores/001/211/660/products/corona11-f88092ba1d4b561ccc16196440343220-640-0.webp",
-        "descripcion": "Cerbeza corona"
+        "descripcion": "La Corona es una cerveza de tipo Lager Pilsner, clara y brillante, de espuma blanca y consistente. Tiene notas afrutadas, de cuerpo medio, fresca, balanceada y muy fácil de beber. En boca es dulce y recuerda al sabor del cereal."
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "precio": 3200,
         "stock": 15,
         "imagen": "https://contenido.quesosdeeuropa.com/uploads/shutterstock_1924577798_9f237bac6b.jpg",
-        "descripcion": "Queso Europeo"
+        "descripcion": "Este queso es uno de los más conocidos dentro de la cultura pop. No por su nombre, región o sabor, sino por los característicos agujeros de su corteza y su color amarillo. Indudablemente, si en una caricatura sale una escena con queso, la ilustración será un Emmental en forma de triángulo."
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "precio": 1100,
         "stock": 20,
         "imagen": "https://acdn.mitiendanube.com/stores/001/157/846/products/5401-b60f927557ffdb70f616321459249880-640-0.png",
-        "descripcion": "Aceitunas verdes"
+        "descripcion": "Aceitunas Verdes. Se recolectan antes de que el fruto adopte el color dorado o rojizo propio del inicio de la maduración —ciclo denominado «envero»—. Estas aceitunas deben ser firmes, sanas y no tener otras manchas distintas de las de su pigmentación natural. Su color varía del verde al amarillo paja"
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "precio": 800,
         "stock": 10,
         "imagen": "https://acdn.mitiendanube.com/stores/001/157/846/products/muzzarella_cilindrica_3k11-b29436db64b91ffe1d16319684539763-1024-1024.webp",
-        "descripcion": "Muzzarella Barraza"
+        "descripcion": "La muzzarella posee una identidad única para todos los argentinos que con sus gustos, costumbres y usos le fueron dando una identidad única a este queso. Es elaborada con leche de vaca y como producto presente de la base alimentaria reúne a miles de personas en la mesa diaria."
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "precio": 2100,
         "stock": 20,
         "imagen": "https://acdn.mitiendanube.com/stores/001/157/846/products/3290996_f11-e1caa32c3e21bf87ca16319057007350-1024-1024.webp",
-        "descripcion": "Jamon Cocido 1era calidad"
+        "descripcion": "Jamón cocido genuino, fileteado y envasado al vacío. Libre de gluten (sin TACC) Marca: Cagnoli. Sobre el producto: Elaborado a partir de músculos de cerdos criados y seleccionados en Tandil, el jamón cocido genuino de Cagnoli, es único por su sabor y aroma natural"
     },
     {
         "id": 11,
@@ -85,7 +85,7 @@
         "precio": 1400,
         "stock": 20,
         "imagen": "https://acdn.mitiendanube.com/stores/001/157/846/products/images-5-cac96e3097fe59975517146788817816-1024-1024.webp",
-        "descripcion": "Nueces con cascara x100gr"
+        "descripcion": "Nuez con cáscara de excelente calidad de gran tamaño. Alimento que se destaca por su aporte de aceites naturales cardioprotectores. De sabor y textura suave."
     },
     {
         "id": 12,
@@ -93,14 +93,14 @@
         "precio": 11000,
         "stock": 20,
         "imagen": "https://acdn.mitiendanube.com/stores/001/157/846/products/membrillo-esnao1-2e044f7c9587a5229a16878823647704-1024-1024.webp",
-        "descripcion": "Lata de dulce de membrillo"
+        "descripcion": "Un clásico en la mesa de postres junto con el queso y en su variación con el dulce de batata. También ideal para rellenar los famosos pastelitos de hojaldre."
     },
     {
         "id": 13,
         "nombre": "Dulce de leche",
         "precio": 1100,
         "stock": 20,
-        "imagen": "https://acdn.mitiendanube.com/stores/001/157/846/products/membrillo-esnao1-2e044f7c9587a5229a16878823647704-1024-1024.webp",
-        "descripcion": "Dulce de leche clasico La serenisima"
+        "imagen": "https://acdn.mitiendanube.com/stores/001/157/846/products/dulce-de-leche-clasico-la-serenisima-con-calcio-400-gr-_11-42490cb040d10fc36d16321420429277-1024-1024.webp",
+        "descripcion": "Dulce de Leche Clasico La Serenisima 400gr Libre de Gluten (sin TACC). Contiene 400 gr. Sobre el producto: Con una mayor proporción de leche y menos azúcar que el Dulce de Leche Clásico La Serenísima, es un producto de cuerpo firme y sabor intenso, acaramelado y cremoso"
     }
 ]
