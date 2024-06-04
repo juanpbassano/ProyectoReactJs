@@ -6,6 +6,7 @@ import ItemListContainer from './components/ItemListContainer'
 import Carrito from './components/Carrito';
 import Login from './components/Login';
 import Descripcion from './components/Descripcion';
+import NoEncontrado from './components/NoEncontrado';
 
 const App = () => {
   return (
@@ -15,7 +16,9 @@ const App = () => {
         <Route path="/" element={<ItemListContainer/>}/>
         <Route path="/carrito" element={<Carrito/>}/>
         <Route path="/login" element={<Login/>}/>
-       <Route path="/descripcion/:id" element={<Descripcion/>} />
+        <Route path="/descripcion/:id" element={<Descripcion/>} />
+        <Route path="/category/:categoria" element={<ItemListContainer/>}/>
+        <Route path="/*" element={<NoEncontrado/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

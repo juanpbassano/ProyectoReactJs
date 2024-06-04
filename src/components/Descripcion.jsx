@@ -1,7 +1,9 @@
-import { useParams } from 'react-router-dom';
-import bd from '../../data/bd.json';
+import { useParams } from 'react-router-dom'
+import bd from '../../data/bd.json'
 import { useEffect, useState } from "react"
-import Loading from './Loading';
+import Loading from './Loading'
+
+
 
 const Descripcion = () => {
     const { id } = useParams();
@@ -54,6 +56,7 @@ const Descripcion = () => {
                             <button className="btn-add-cart">Agregar al carrito</button>
                         </div>
                     </div>
+                    
                 </div>
                 :
                 <div><Loading /></div>
