@@ -1,12 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ id, imagen, nombre, descripcion = "Sin informacion", precio }) => {
+const Card = ({ id, imagen, nombre, precio }) => {
 
 
-
+//se crea un link para que toda la card se un link.
     return (
-        <Link to={`/descripcion/${id}`}>
+        <Link to={`/descripcion/${id}`}> 
             <div className="card">
                 <h2>
                     {nombre}
