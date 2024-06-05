@@ -19,11 +19,11 @@
     },
     {
         "id": 3,
-        "nombre": "Atun",
+        "nombre": "Atun al natural",
         "precio": 3000,
         "stock": 5,
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_820491-MLA53170558100_012023-F.webp",
-        "descripcion": "El atún, cuidadosamente seleccionado, se conserva en aceite de la más alta calidad, lo que garantiza su frescura y sabor inigualables. Además, es apto para celíacos, ya que no contiene gluten. Disfruta de su textura suave y jugosa, ideal para preparar ensaladas, sándwiches o simplemente disfrutarlo solo.",
+        "descripcion": "El atún La Campagnola, cuidadosamente seleccionado, se conserva en aceite de la más alta calidad, lo que garantiza su frescura y sabor inigualables. Además, es apto para celíacos, ya que no contiene gluten. Disfruta de su textura suave y jugosa, ideal para preparar ensaladas, sándwiches o simplemente disfrutarlo solo.",
         "category": "almacen"
     },
     {

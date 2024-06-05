@@ -19,7 +19,7 @@ const Descripcion = () => {
                 const p = respuesta.find(prod => prod.id == id);
                 setProducto(p);
             })
-    }, []);
+    }, [id]);
 
 
     const [cantidad, setCantidad] = useState(0);

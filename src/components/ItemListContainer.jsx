@@ -3,11 +3,11 @@ import bd from "../../data/bd.json"
 import Card from "./Card"
 import Loading from "./Loading"
 import { useParams, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 const ItemListContainer = () => {
     const { category } = useParams()
-    const navigate = useNavigate()
     const [data, setData] = useState(null)
     const [filtro, setFiltro] = useState(null)
 
@@ -24,17 +24,15 @@ const ItemListContainer = () => {
             .catch((error) => {
                 console.error("Error al obtener los datos:", error);
             });
-    }, []);
+    }, [category]);
 
     //eventos de los botones para filtar
     const handleClickA = () => {
         setFiltro("frescos");
-        {filtro && navigate(`/itemlistcontainer/${filtro}`)}
     };
 
     const handleClickB = () => {
         setFiltro("almacen");
-        {filtro && navigate(`/itemlistcontainer/${filtro}`)}
     };
 
     //funcion que filtra por categoria si es que se aplica un filtro
@@ -51,8 +49,8 @@ const ItemListContainer = () => {
         <div className="cont-productos">
             <h1>Productos disponibles:</h1>
             <h4>Filtrar por categoria</h4>
-            <button onClick={handleClickA}>Productos Frescos</button>
-            <button onClick={handleClickB}>Productos de Almacen </button>
+            <Link to={`/itemlistcontainer/frescos`}><button onClick={handleClickA}>Productos Frescos</button></Link>
+            <Link to={`/itemlistcontainer/almacen`}><button onClick={handleClickB}>Productos de Almacen</button></Link>
             <div>
                 {data ?
                     <section className="los-productos">{
