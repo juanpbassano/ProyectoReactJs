@@ -27,13 +27,14 @@ const ItemListContainer = () => {
     }, [category]);
 
     //eventos de los botones para filtar
-    const handleClickA = () => {
-        setFiltro("frescos");
+    const handleClickA = (e) => {
+        if (e.target.id === "frescos") {
+            setFiltro("frescos")
+        } else {
+            setFiltro("almacen")
+        }
     };
 
-    const handleClickB = () => {
-        setFiltro("almacen");
-    };
 
     //funcion que filtra por categoria si es que se aplica un filtro
     const productosFiltrados =( data )=>{
@@ -49,8 +50,8 @@ const ItemListContainer = () => {
         <div className="cont-productos">
             <h1>Productos disponibles:</h1>
             <h4>Filtrar por categoria</h4>
-            <Link to={`/itemlistcontainer/frescos`}><button onClick={handleClickA}>Productos Frescos</button></Link>
-            <Link to={`/itemlistcontainer/almacen`}><button onClick={handleClickB}>Productos de Almacen</button></Link>
+            <Link to={`/itemlistcontainer/frescos`}><button onClick={handleClickA} id="frescos" >Productos Frescos</button></Link>
+            <Link to={`/itemlistcontainer/almacen`}><button onClick={handleClickA} id="almacen" >Productos de Almacen</button></Link>
             <div>
                 {data ?
                     <section className="los-productos">{
