@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import bd from '../../data/bd.json'
 import { useEffect, useState } from "react"
 import Loading from './Loading'
-
+import { pedirDatos } from '../helpers/pedirDatos'
 
 
 const Descripcion = () => {
@@ -10,15 +10,14 @@ const Descripcion = () => {
     const [producto, setProducto] = useState(null);
 
     useEffect(() => {
-        const obtenerData = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(bd)
-            }, 500)
-        })
+        pedirDatos()
             .then((respuesta) => {
                 const p = respuesta.find(prod => prod.id == id);
                 setProducto(p);
             })
+            .catch((error) => {
+                console.error("Error al obtener los datos:", error);
+            });
     }, [id]);
 
 
@@ -56,7 +55,7 @@ const Descripcion = () => {
                             <button className="btn-add-cart">Agregar al carrito</button>
                         </div>
                     </div>
-                    
+
                 </div>
                 :
                 <div><Loading /></div>

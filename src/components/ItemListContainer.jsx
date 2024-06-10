@@ -1,4 +1,4 @@
-import { pedirDatos, productosFiltrados  } from "../helpers/pedirDatos"
+import { pedirDatos, productosFiltrados } from "../helpers/pedirDatos"
 import { useEffect, useState } from "react"
 import Card from "./Card"
 import Loading from "./Loading"
@@ -6,25 +6,25 @@ import { useParams } from "react-router-dom"
 
 
 const ItemListContainer = () => {
-    const { category} = useParams()
+    const { category } = useParams()
     const [data, setData] = useState(null)
 
     // hook para simular y renderizar la base de datos de forma asincronica 
     useEffect(() => {
         pedirDatos()
-        .then((respuesta) => {
-            setData(respuesta)
-        })
-        .catch((error) => {
-            console.error("Error al obtener los datos:", error);
-        });
+            .then((respuesta) => {
+                setData(respuesta)
+            })
+            .catch((error) => {
+                console.error("Error al obtener los datos:", error);
+            });
     }, [category]);
 
 
     return (
         <div className="cont-productos">
             <h1>Productos disponibles:</h1>
-            <div>       
+            <div>
                 {data ?
                     <section className="los-productos">{
                         productosFiltrados(data, category).map((producto) => (
