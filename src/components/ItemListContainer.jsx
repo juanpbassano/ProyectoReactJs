@@ -5,7 +5,7 @@ import Loading from "./Loading"
 import { useParams } from "react-router-dom"
 
 
-const ItemListContainer = ({filtro}) => {
+const ItemListContainer = () => {
     const { category} = useParams()
     const [data, setData] = useState(null)
 
@@ -27,7 +27,7 @@ const ItemListContainer = ({filtro}) => {
             <div>       
                 {data ?
                     <section className="los-productos">{
-                        productosFiltrados(data, category, filtro).map((producto) => (
+                        productosFiltrados(data, category).map((producto) => (
                             <Card
                                 key={producto.id}
                                 id={producto.id}

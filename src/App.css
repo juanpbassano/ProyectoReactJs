@@ -35,9 +35,9 @@ input {
   border-radius: 1.2rem;
 }
 
-.contButtons {
+.contButtons{
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -50,12 +50,18 @@ input {
 }
 
 .navButtons {
+  width: 6rem;
+  height: 3rem;
   text-decoration: none;
   color: white;
   padding: .2rem;
   margin: .3125rem;
   border: 2px solid rgb(255, 255, 255);
   border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .icono-carrito {
