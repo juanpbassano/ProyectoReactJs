@@ -1,24 +1,35 @@
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 
+const NavBar = ({ setFiltro }) => {
+    const handleClickA = (e) => {
+        console.log(e.target.id);
+        if (e.target.id === "frescos") {
+            setFiltro("frescos")
+        } else {
+            setFiltro("almacen")
+        }
+    };
 
-const NavBar = () => {
+
     return (
         <header>
             <nav>
                 <div className='navContainer'>
                     <h1 className='titulo'>Ecomerce con react</h1>
                     <div>
-                        <input className='search' id="search" type="search" required placeholder="Buscador" />
+                        <input className='search' id="text" type="search" required placeholder="Buscadar productos" />
                     </div>
                     <ul className='contButtons'>
-                        <li className='navButtons'><Link to={`/`}>Home</Link></li>
-                        <Link to={'./carrito'}><CartWidget/></Link>
-                        <li className='navButtons'><Link to={`/Login`}>Login/Signup</Link></li>
+                        <Link to={`/itemlistcontainer/frescos`}><li onClick={handleClickA} id="frescos" className='navButtons'>Productos Frescos</li></Link>
+                        <Link to={`/itemlistcontainer/almacen`}><li onClick={handleClickA} id="almacen" className='navButtons' >Productos de Almacen</li></Link>
+                        <Link to={`/`}><li className='navButtons'>Home</li></Link>
+                        <Link to={'./carrito'}><CartWidget /></Link>
+                        <Link to={`/Login`}><li className='navButtons'>Login/Signup</li></Link>
                     </ul>
                 </div>
             </nav>
-        </header> 
+        </header>
     )
 }
 export default NavBar;

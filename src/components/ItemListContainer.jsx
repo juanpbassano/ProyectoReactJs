@@ -1,61 +1,33 @@
+import { pedirDatos, productosFiltrados  } from "../helpers/pedirDatos"
 import { useEffect, useState } from "react"
-import bd from "../../data/bd.json"
 import Card from "./Card"
 import Loading from "./Loading"
-import { useParams, useNavigate } from "react-router-dom"
-import { Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 
-const ItemListContainer = () => {
-    const { category } = useParams()
+const ItemListContainer = ({filtro}) => {
+    const { category} = useParams()
     const [data, setData] = useState(null)
-    const [filtro, setFiltro] = useState(null)
 
     // hook para simular y renderizar la base de datos de forma asincronica 
     useEffect(() => {
-        const obtenerData = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(bd)
-            }, 1500)
+        pedirDatos()
+        .then((respuesta) => {
+            setData(respuesta)
         })
-            .then((respuesta) => {
-                setData(respuesta)
-            })
-            .catch((error) => {
-                console.error("Error al obtener los datos:", error);
-            });
+        .catch((error) => {
+            console.error("Error al obtener los datos:", error);
+        });
     }, [category]);
-
-    //eventos de los botones para filtar
-    const handleClickA = (e) => {
-        if (e.target.id === "frescos") {
-            setFiltro("frescos")
-        } else {
-            setFiltro("almacen")
-        }
-    };
-
-
-    //funcion que filtra por categoria si es que se aplica un filtro
-    const productosFiltrados =( data )=>{
-        if (category){ 
-            return data.filter((producto) => producto.category === filtro)
-        }else{
-                return data
-        }
-    }
 
 
     return (
         <div className="cont-productos">
             <h1>Productos disponibles:</h1>
-            <h4>Filtrar por categoria</h4>
-            <Link to={`/itemlistcontainer/frescos`}><button onClick={handleClickA} id="frescos" >Productos Frescos</button></Link>
-            <Link to={`/itemlistcontainer/almacen`}><button onClick={handleClickA} id="almacen" >Productos de Almacen</button></Link>
-            <div>
+            <div>       
                 {data ?
                     <section className="los-productos">{
-                        productosFiltrados(data).map((producto) => (
+                        productosFiltrados(data, category, filtro).map((producto) => (
                             <Card
                                 key={producto.id}
                                 id={producto.id}
