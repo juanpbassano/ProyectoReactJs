@@ -1,9 +1,9 @@
-import { pedirDatos, productosFiltrados } from "../helpers/pedirDatos"
-import { useEffect, useState } from "react"
-import Card from "./Card"
-import Loading from "./Loading"
-import { useParams } from "react-router-dom"
-
+import { pedirDatos, productosFiltrados } from "../helpers/pedirDatos";
+import { useEffect, useState } from "react";
+import ItemList from "./ItemList";
+import Loading from "./Loading";
+import { useParams } from "react-router-dom";
+import { tuUpperCase } from "../helpers/tuUpperCase";
 
 const ItemListContainer = () => {
     const { category } = useParams()
@@ -25,10 +25,14 @@ const ItemListContainer = () => {
         <div className="cont-productos">
             <h1>Productos disponibles:</h1>
             <div>
+                {category && 
+                <h2>Filtrados por productos {tuUpperCase(category)}</h2>}
+            </div>
+            <div>
                 {data ?
                     <section className="los-productos">{
                         productosFiltrados(data, category).map((producto) => (
-                            <Card
+                            <ItemList
                                 key={producto.id}
                                 id={producto.id}
                                 nombre={producto.nombre}

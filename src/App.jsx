@@ -1,12 +1,12 @@
 import './App.css';
 import NavBar from "./components/NavBar";
-import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemListContainer from './components/ItemListContainer'
-import Carrito from './components/Carrito';
+import CartWidget from './components/CartWidget';
 import Login from './components/Login';
-import Descripcion from './components/Descripcion';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import NoEncontrado from './components/NoEncontrado';
+import Contacto from './components/Contacto';
 
 
 
@@ -17,13 +17,13 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<ItemListContainer />}/>
-        <Route path="/itemlistcontainer/:category" element={<ItemListContainer/>}/>
-        <Route path="/descripcion/:id" element={<Descripcion/>} />
-        <Route path="/carrito" element={<Carrito/>}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/Itemlistcontainer/:category" element={<ItemListContainer/>}/>
+        <Route path="/ItemDetailContainer/:id" element={<ItemDetailContainer/>} />
+        <Route path="/CartWidget" element={<CartWidget/>}/>
+        <Route path="/Contacto" element={<Contacto/>}/>
+        <Route path="/Login" element={<Login/>}/>
         <Route path="/*" element={<NoEncontrado/>} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   )
 }
