@@ -1,26 +1,32 @@
-import { Link } from "react-router-dom";
+import Loading from "./Loading";
+import { productosFiltrados } from "../helpers/pedirDatos";
+import Item from "./Item";
 
-const ItemList = ({ id, imagen, nombre, precio }) => {
+const ItemList = ({ data, category }) => {
 
-
-    //se crea un link para que toda la card se un link.
     return (
-        <Link to={`/ItemDetailContainer/${id}`}>
-            <div className="card">
-                <h2>
-                    {nombre}
-                </h2>
-                <div className="container-img">
-                    <img src={imagen} alt={'foto de ' + nombre} className="imagenes-productos" />
+        <div>
+            {data ?
+                <section className="los-productos">{
+                    productosFiltrados(data, category).map((producto) => (
+                        <Item
+                            key={producto.id}
+                            id={producto.id}
+                            nombre={producto.nombre}
+                            descripcion={producto.descripcion}
+                            precio={producto.precio}
+                            imagen={producto.imagen}
+                            category={producto.category}
+                        />
+                    ))
+                }
+                </section >
+                :
+                <div>
+                    <Loading />
                 </div>
-                <p>
-                    Precio: ${precio}
-                </p>
-                <p>
-                    Ver Mas...
-                </p>
-            </div>
-        </Link>
+            }
+        </div>
     )
 }
 export default ItemList;
