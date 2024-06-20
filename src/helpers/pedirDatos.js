@@ -3,8 +3,8 @@ import bd from "../../data/bd.json"
 export const pedirDatos = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(bd)
-        }, 100)
+            resolve(bd);
+        }, 200)
     })
 };
 

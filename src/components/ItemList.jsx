@@ -1,6 +1,6 @@
-import Loading from "./Loading";
 import { productosFiltrados } from "../helpers/pedirDatos";
 import Item from "./Item";
+import Loading from "./Loading"
 
 const ItemList = ({ data, category }) => {
 
@@ -23,7 +23,7 @@ const ItemList = ({ data, category }) => {
                 </section >
                 :
                 <div>
-                    <Loading />
+                    <Loading/>
                 </div>
             }
         </div>

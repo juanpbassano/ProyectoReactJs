@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ItemQuantitySelector = ( {cantidad, handleRestar, handleSumar, stock, handleAdd}) => {
+const ItemQuantitySelector = ( {cantidad, handleRestar, handleSumar, stock, AddItemButton}) => {
 
     return (
         <div className='descr-botones'>
@@ -11,7 +11,7 @@ const ItemQuantitySelector = ( {cantidad, handleRestar, handleSumar, stock, hand
                 <button onClick={handleSumar} disabled={cantidad >= stock} className="btn-sumar">+</button>
             </div>
             <div className="cont-btn-add">
-                <button className="btn-add-cart" onClick={handleAdd}>Agregar al carrito</button>
+                <button className="btn-add-cart" onClick={AddItemButton}>Agregar al carrito</button>
             </div>
         </div>
     )

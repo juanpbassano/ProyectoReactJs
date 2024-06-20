@@ -7,13 +7,20 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import NoEncontrado from './components/NoEncontrado';
 import Contacto from './components/Contacto';
 import Carrito from './components/Carrito';
-
+import { useContext, useState } from 'react';
+import { CartContext } from './context/CartContext';
 
 
 
 const App = () => {
 
+  const [carrito , setCarrito] = useState([])
+console.log(carrito);
+
+
+
   return (
+    <CartContext.Provider value={{carrito, setCarrito}}>
     <BrowserRouter>
       <NavBar />
       <Routes>
@@ -25,6 +32,7 @@ const App = () => {
         <Route path="/*" element={<NoEncontrado/>} />
       </Routes>
     </BrowserRouter>
+    </CartContext.Provider>
   )
 }
 

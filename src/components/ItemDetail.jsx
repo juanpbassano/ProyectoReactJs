@@ -1,7 +1,11 @@
+import { CartContext } from '../context/CartContext';
 import ItemQuantitySelector from './ItemQuantitySelector'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import {existeEnCarrito} from "../helpers/existeEnCarrito"
 
-const ItemDetail = ({producto}) => {
+
+const ItemDetail = ({ producto }) => {
+    const { carrito, setCarrito } = useContext(CartContext);
     const [cantidad, setCantidad] = useState(1);
 
     const handleSumar = () => {
@@ -10,9 +14,20 @@ const ItemDetail = ({producto}) => {
     const handleRestar = () => {
         cantidad > 1 && setCantidad(cantidad - 1);
     }
-    const handleAdd = () =>{
-        console.log({...producto, cantidad});
+
+    const AddItemButton = () => {
+        const addedProduct = { ...producto, cantidad };
+        const carritoCopia = [...carrito];
+        const enElCarrito = existeEnCarrito(carritoCopia, addedProduct);
+        
+        if (enElCarrito) {
+            enElCarrito.cantidad += cantidad;
+        } else {
+            carritoCopia.push(addedProduct);
+        }
+        setCarrito(carritoCopia)
     }
+
 
     return (
         <div>
@@ -26,7 +41,12 @@ const ItemDetail = ({producto}) => {
                     <p>Precio:${producto.precio}</p>
                 </div>
                 <div>
-                    <ItemQuantitySelector cantidad={cantidad} handleSumar={handleSumar} handleRestar={handleRestar} stock={producto.stock} handleAdd={handleAdd} />
+                    <ItemQuantitySelector 
+                    cantidad={cantidad} 
+                    handleSumar={handleSumar} 
+                    handleRestar={handleRestar} 
+                    stock={producto.stock} 
+                    AddItemButton={()=>{AddItemButton(producto, cantidad)}}/>
                 </div>
             </div>
         </div>
