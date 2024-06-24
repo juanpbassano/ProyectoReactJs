@@ -11,7 +11,8 @@ header {
   top: 0;
   z-index: 999;
 }
-a{
+
+a {
   color: black;
   text-decoration: none;
 }
@@ -31,23 +32,12 @@ a{
   font-size: 3rem;
 }
 
-input {
-  border-radius: 1.2rem;
-}
-
-.contButtons{
+.contButtons {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
 
-.search {
-  background-color: rgba(255, 255, 255, 0.883);
-  border-radius: .625rem;
-  width: 20rem;
-  height: 2rem;
-  box-shadow: grey 1px 4px 2px 2px;
-}
 
 .navButtons {
   display: flex;
@@ -64,7 +54,8 @@ input {
   border-radius: .25rem;
 
 }
-.carButtons{
+
+.carButtons {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -79,9 +70,15 @@ input {
   border-radius: .25rem;
 }
 
-.icono-carrito {
-  width: 15px;
-  height: 15px;
+.svg-carrito {
+  width: 20px;
+  height: 20px;
+  margin: .2rem;
+}
+.element-carrito{
+  color: rgb(0, 0, 0);
+  padding: 1px;
+
 }
 
 /* productos  */
@@ -103,7 +100,7 @@ input {
     "card card card card"
     "card card card card";
   justify-items: center;
-  background-color: rgba(4, 159, 255, 0.516);
+  background-color: rgba(4, 159, 255, 0.697);
   border-radius: 1.25rem;
 }
 
@@ -140,45 +137,57 @@ h4 {
   height: 8rem;
 }
 
-p {
+.precio {
+  font-weight: 600;
   margin: 0px;
 }
 
 /* ++++++DESCRIPCION +++++*/
-.descr-gral{
+.descr-gral {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.descr-conteiner{
+
+.descr-conteiner {
+  border: black solid 1px;
+  border-radius: .625rem;
   width: 47.5rem;
   display: grid;
-  margin-bottom: .3125rem;
+  margin: 1rem;
+  padding: 2rem;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 3fr 1fr;
   gap: 1rem;
-  grid-template-areas: 
-  "img1 det2"
-  "img1 btn3";
+  grid-template-areas:
+    "img1 det2"
+    "img1 btn3";
 }
-.descr-cont-img{
+
+.descr-cont-img {
   grid-area: img1;
 }
-.descr-detalle{
+
+.descr-detalle {
   grid-area: det2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.descr-botones{
+
+.descr-botones {
   grid-area: btn3;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.descr-img-producto{
+.descr-img-producto {
   height: 20rem;
   width: auto;
 }
+
 .botones-stock {
   display: flex;
   flex-direction: row;
@@ -189,7 +198,7 @@ p {
 .btn-restar,
 .btn-sumar {
   font-size: .7rem;
-  background-color: rgb(0, 179, 48);
+  background-color: rgba(4, 159, 255, 0.697);
   margin: .3125rem;
   height: 1.6rem;
   width: 1.6rem;
@@ -207,44 +216,20 @@ p {
 }
 
 .btn-add-cart {
-  background-color: rgb(255, 255, 0);
-  border-radius: 0.4rem;
+  background-color: rgba(4, 159, 255, 0.697);
+  border-radius: .3125rem;
+  padding: .5rem;
   color: rgb(0, 0, 0);
 }
 
-/* FOOTER */
-
-.contFooter {
-  background-color: rgb(4, 159, 255);
-  color: white;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.contEnlases {
-  display: flex;
-  flex-direction: row;
-}
-
-li {
-  list-style: none;
-  margin: 0.2rem;
-}
-
-.social-link{
-  text-decoration: none;
-  color: white;
-}
-
-.register{
+.register {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 1rem;
 }
-.inputR{
+
+.inputR {
   padding: .5rem;
   width: 15rem;
   border-radius: .5rem;
@@ -252,8 +237,102 @@ li {
 }
 
 
-.btnCont{
+.btnCont {
   width: 5rem;
-  height: 2rem ;
+  height: 2rem;
   margin: .6rem;
+}
+
+/* //++++++++carrito+++++++++// */
+.cont-carrito {
+  width: 30rem;
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: .125rem black solid;
+  border-radius: .5rem;
+  background-color: rgba(4, 159, 255, 0.697);
+
+}
+
+.card-carrito {
+  margin: 1rem;
+  padding: .3rem;
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  border: .125rem rgb(255, 255, 255) solid;
+  border-radius: .625rem;
+  background-color: rgba(230, 230, 230, 0.874);
+  box-shadow: gray 5px 4px 5px 4px;
+}
+
+.cont-btn-borrar {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+}
+
+.btn-borrar {
+  justify-content: end;
+  background-color: red;
+  color: white;
+  border-radius: .3rem;
+  display: column;
+  width: 3rem;
+  margin: 0.5rem;
+
+}
+.cont-btn-compra{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.btn-vaciar, .btn-pagar{
+width: 6rem ;
+height: 2.5rem;
+font-weight: 600;
+border-radius: .5rem;
+background-color: red;
+margin: 0.5rem;
+font-size: .9rem;
+border-radius: .6rem;
+}
+.btn-pagar{
+  background-color: rgba(8, 203, 11, 0.941);
+}
+.cont-checkout{
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cont-form{
+  width: 31.25rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inp-form, .btn-form{
+  width: 25rem;
+  height: 2.5rem;
+  margin: .5rem;
+  padding-left: .5rem;
+  font-size: 1.1rem;
+  border-radius: .6rem;
+}
+.btn-form{
+background-color: rgba(4, 159, 255, 0.697);
+}
+.comprobante{
+  border: solid 2px black;
+  border-radius: .625rem;
+  padding: 1rem;
+  margin: .5rem;
+  background-color: rgba(4, 159, 255, 0.697);
+
 }

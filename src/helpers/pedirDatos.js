@@ -1,4 +1,4 @@
-import bd from "../../data/bd.json"
+/* import bd from "../../data/bd.json"
 
 export const pedirDatos = () => {
     return new Promise((resolve, reject) => {
@@ -6,7 +6,7 @@ export const pedirDatos = () => {
             resolve(bd);
         }, 200)
     })
-};
+}; */
 
 //funcion que filtra por categoria si es que se aplica un filtro
 export const productosFiltrados = (data, category) => {
