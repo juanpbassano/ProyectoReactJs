@@ -3,14 +3,19 @@ import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom';
 
 const Carrito = () => {
+  //traigo funciones y estados del Cartcontext
   const { carrito, totalPagar, limpiarCarrito, borrarProducto } = useContext(CartContext);
+  //funcion para vaciar el carrito
   const vaciarCarrito = () => {
     limpiarCarrito();
   }
 
+
+/* mapeo de datos del array carrito si existe*/
   return (
     <div className='cont-carrito'>
       <h1 className='tit-carrito'>Productos en el carrito</h1>
+
       {carrito && carrito.map((producto) => (
         <div key={producto.id} className='card-carrito'>
           <h3 className='tit-product'>{producto.nombre}</h3>

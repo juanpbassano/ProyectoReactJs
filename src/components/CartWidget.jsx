@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartWidget = () => {
+    //Traigo los productos acumulados en el carrito desde cartContext
     const { elementosDelCarrito } = useContext(CartContext)
     return (
         <>

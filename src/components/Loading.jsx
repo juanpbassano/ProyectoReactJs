@@ -1,4 +1,4 @@
-
+//componente creado para mostrar un cargando mientras se cargan los datos
 const Loading = () => (
   <div className="cont-cargando">
     <h2 > Cargando Productos Disponibles...</h2>

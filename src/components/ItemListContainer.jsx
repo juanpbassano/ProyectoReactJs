@@ -9,13 +9,13 @@ const ItemListContainer = () => {
     const { category } = useParams()
     const [data, setData] = useState(null)
 
-    // hook para simular y renderizar la base de datos de forma asincronica 
+    //hook para simular y renderizar la base de datos de forma asincronica segun cambie la categoria
     useEffect(() => {
         const fetchData = async () => {
             try {
-                //el segundo argumento de la función collection es el nombre de nuestra colección
+                //el segundo argumento de la función collection es el nombre la colección de firebase
                 const querySnapshot = await getDocs(collection(db, "BaseReact"))
-                // para obtener los documentos (que son los datos que contiene la colección) debo mapearlos de la siguiente manera
+                // Mapeo de los elementos obtenidos de los documentos de la colección
                 const obtenerDocumentos = querySnapshot.docs.map(element => ({ id: element.id, ...element.data()}))
                 setData(obtenerDocumentos)
             } catch(error) {

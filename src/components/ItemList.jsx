@@ -3,7 +3,7 @@ import Item from "./Item";
 import Loading from "./Loading"
 
 const ItemList = ({ data, category }) => {
-
+    //si existe data llama a la funcion productos filtrados y renderiza segun la categoria si existe
     return (
         <div>
             {data ?

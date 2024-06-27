@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const FormularioCompra = ({ onSubmit, register }) => {
     return (
         <form onSubmit={onSubmit} className='cont-form'>

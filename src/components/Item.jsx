@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+//recibe por props datos del producto.
 const Item = ({ id, imagen, nombre, precio }) => {
 
 
@@ -14,7 +15,7 @@ const Item = ({ id, imagen, nombre, precio }) => {
                     <img src={imagen} alt={'foto de ' + nombre} className="imagenes-productos" />
                 </div>
                 <p className="precio">
-                    Precio: ${precio}
+                    Precio unitario: ${precio}
                 </p>
             </div>
         </Link>

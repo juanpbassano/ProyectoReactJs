@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Recibe comprobante como prop y luego lo renderiza.
 const ConfirmacionCompra = ({ comprobante }) => {
   return (
     <div className='cont-checkout'>

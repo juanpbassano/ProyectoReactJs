@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Contacto = () => {
+    //previene la actualizacion de la pag al enviar.
     const hanbdleSubmit = (e) => {
         e.preventDefault();
     }
