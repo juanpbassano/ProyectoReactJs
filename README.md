@@ -1,4 +1,4 @@
-Proyecto de E-commerce en React + Vite para coderhouse.
+Despensa Atomica es un proyecto de E-commerce en React + Vite para coderhouse.
 Este proyecto simula un mini-market virtual. implementa un carrito de compras utilizando React y Firebase como base de datos. 
 React nos permite renderizar solo los componentes que fueron actualizados dinamicamente sin recargar la pagina. 
 

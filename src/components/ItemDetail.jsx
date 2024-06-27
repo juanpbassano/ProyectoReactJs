@@ -2,6 +2,7 @@ import { CartContext } from '../context/CartContext';
 import { getStockFromFirebase } from '../firebaseConfig';
 import ItemQuantitySelector from './ItemQuantitySelector'
 import React, { useContext, useEffect, useState } from 'react'
+import Swal from "sweetalert2";
 
 //recibe producto como prop
 const ItemDetail = ({ producto }) => {
@@ -20,6 +21,13 @@ const ItemDetail = ({ producto }) => {
             const productoEnCarrito = carrito.find(item => item.id === producto.id);
             const cantidadEnCarrito = productoEnCarrito ? productoEnCarrito.cantidad : 0;
             if (cantidadEnCarrito >= stockDisponible) {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Se agrego todo el stock disponible en el carrito",
+                    showConfirmButton: false,
+                    timer: 800
+                });
                 setAgotado(true);
             } else {
                 setAgotado(false);

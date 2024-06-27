@@ -5,6 +5,7 @@ import { collection, addDoc, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 import ConfirmacionCompra from './ConfirmacionCompra';
 import FormularioCompra from './FormularioCompra';
+import Swal from "sweetalert2";
 
 const CheckOut = () => {
     //se traen datos del context
@@ -29,7 +30,13 @@ const CheckOut = () => {
             //Luego de enviar el pedido se ejecuta la funcion de limpiar el carrito para generar un array bacio
             limpiarCarrito();
         } catch (error) {
-            alert("Error al procesar la compra: ", error);
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: ("Error al procesar la compra "),
+                showConfirmButton: false,
+                timer: 800
+            });
         }
     };
 
